@@ -1,37 +1,99 @@
-.mainContainer {
-    /*background-color: cadetblue;*/
-    display: grid;
-    grid-template-areas: 
-     'HD HD HD'
-     'BR BR BR'
-     'LT PR PR'
-     'PI PI PI';
- }
-.encabezado{
-    grid-area: HD;
-    background-color: #DEAA79;
-    padding: 50px;
+*{
+    padding: 3px;
 }
-
-.navBar{
-    background-color: #659287;
-    grid-area: BR;
-    padding: 50px;
+.mainContainer {
+   /*background-color: cadetblue;*/
+   display: grid;
+   grid-template-areas: 
+    'HD HD HD'
+    'BR BR BR'
+    'LT PR PR'
+    'PI PI PI';
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  background-color:#432E54 ;
+  color: bisque;
+  padding: 20px;
+  grid-area: HD;
+}
+.barra {
+  background-color:#E8BCB9 ;
+  grid-column: BR;
 }
 .principal{
-    background-color: #FFE6A9;
+    background-color:beige ;
     grid-area: PR;
-    padding: 50px;
 }
-
 .lateral{
-    background-color: #B1C29E;
+    background-color:#4B4376 ;
     grid-area: LT;
-    padding: 50px;
+}
+.piePagina{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:#E8BCB9 ;
+    grid-area: PI;
 }
 
-.piePag{
-    background-color: #B1C29E;
-    grid-area: PI;
-    padding: 50px;
+.centrado {
+    text-align: center;
+}
+
+/*Menu*/
+.menu-horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu-horizontal a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 40px;
+    margin: 4px;
+    display: inline-block;
+}
+
+
+.menu-aside{
+    list-style: none;
+    padding: 4px;
+ 
+}
+.menu-aside  a{
+
+    text-decoration: none;
+    padding: 10px 40px;
+    margin: 4px;
+    background-color: blue;
+    color: white;
+    display:block
+}
+
+@media (max-width: 500px) {
+
+    .mainContainer {
+        display: grid;
+        grid-template-areas:
+        'HD HD HD'
+        'BR BR BR'
+        'PR PR PR'
+        'LT LT LT'
+        'PI PI PI';
+    }
+    .menu-horizontal{
+        flex-direction:column;
+        justify-content: center;
+    }
+    .header{
+        flex-direction: column;
+      }
+    
 }
