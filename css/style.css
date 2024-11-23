@@ -1,5 +1,37 @@
+.mainContainer {
+    /*background-color: cadetblue;*/
+    display: grid;
+    grid-template-areas: 
+     'HD HD HD'
+     'BR BR BR'
+     'LT PR PR'
+     'PI PI PI';
+ }
 .encabezado{
-    background-color: blueviolet;
-    color: white;
+    grid-area: HD;
+    background-color: #DEAA79;
+    padding: 50px;
+}
+
+.navBar{
+    background-color: #659287;
+    grid-area: BR;
+    padding: 50px;
+}
+.principal{
+    background-color: #FFE6A9;
+    grid-area: PR;
+    padding: 50px;
+}
+
+.lateral{
+    background-color: #B1C29E;
+    grid-area: LT;
+    padding: 50px;
+}
+
+.piePag{
+    background-color: #B1C29E;
+    grid-area: PI;
     padding: 50px;
 }
